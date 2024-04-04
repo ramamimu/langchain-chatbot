@@ -3,10 +3,12 @@ from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 
-model_kwargs = {'trust_remote_code': True}
-embedding_firqaa = HuggingFaceEmbeddings(model_name='./models/indo-sentence-bert-base', model_kwargs=model_kwargs,)
+from app.docs import load_pdf
+from app.model import load_model
 
-UUD = PyPDFLoader('./docs/UUD-Nomor-Tahun-1945-UUD1945.pdf').load()
+UUD = load_pdf('./app/docs/UUD-Nomor-Tahun-1945-UUD1945.pdf')
+
+embedding_firqaa = load_model("./app/model/modules/indo-sentence-bert-base")
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size = 1000,
