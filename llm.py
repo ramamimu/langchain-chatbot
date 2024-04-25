@@ -7,7 +7,7 @@ from app.llm import get_chain_context_huggingface, gptq, tokenizer
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
-from langchain.chains import ConversationalRetrievalChain
+from langchain.chains import ConversationalRetrievalChain, LLMChain
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModel
 
 from huggingface_hub import login
@@ -74,7 +74,23 @@ def get_llm(name:str = "openai", model = "mistral"):
 
     return get_chain_context_huggingface(model_gptq, token)
 
+from langchain_community.chat_message_histories import ChatMessageHistory
+from langchain_core.chat_history import BaseChatMessageHistory
+
 memory = ConversationBufferMemory(memory_key='chat_history', return_messages=True, ai_prefix="tanyabot")
+store={}
+
+def get_session_history(session_id: str) -> BaseChatMessageHistory:
+    if session_id not in store:
+        store[session_id] = ChatMessageHistory()
+    return store[session_id]
+
+def create_chain():
+   return ConversationalRetrievalChain.from_llm(
+            llm=get_llm(),
+            retriever= get_embeddings("app/embeddings").as_retriever(),
+            memory=ConversationBufferMemory(memory_key='chat_history', return_messages=True, ai_prefix="tanyabot"),
+          )
 
 conversation_chain = ConversationalRetrievalChain.from_llm(
     llm=get_llm(),
