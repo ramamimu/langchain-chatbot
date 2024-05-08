@@ -31,5 +31,5 @@ models = {
   }
 }
 
-snapshot_download(repo_id=models["sealion"]["repo_id"],
-                   local_dir=models["sealion"]["local_dir"])
+snapshot_download(repo_id=models["mistral"]["repo_id"],
+                   local_dir=models["mistral"]["local_dir"])
