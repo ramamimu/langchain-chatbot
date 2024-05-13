@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+import asyncio
 
 from app.embeddings import get_embeddings
 from app.llm import get_chain_context_huggingface, gptq, tokenizer
@@ -59,9 +60,10 @@ models = {
   }
 }
 
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 def get_llm(name:str = "openai", model = "mistral"):
   if name == "openai":
-    return ChatOpenAI()
+    return ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()])
   else:
     path = models[model]["local_dir"]
     token = AutoTokenizer.from_pretrained(pretrained_model_name_or_path=path)
@@ -85,26 +87,25 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
         store[session_id] = ChatMessageHistory()
     return store[session_id]
 
-def create_chain():
-   return ConversationalRetrievalChain.from_llm(
-            llm=get_llm(),
-            retriever= get_embeddings("app/embeddings").as_retriever(),
-            memory=ConversationBufferMemory(memory_key='chat_history', return_messages=True, ai_prefix="tanyabot"),
-          )
+from langchain_core.output_parsers import StrOutputParser
 
 conversation_chain = ConversationalRetrievalChain.from_llm(
     llm=get_llm(),
     retriever=vectorstore.as_retriever(),
     memory=memory,
-)
+) | StrOutputParser()
+
+# solver: https://medium.com/llm-projects/langchain-openai-streaming-101-in-python-edd60e84c9ca
 
 def ask_question(question):
-  response = conversation_chain({'question':question})
-  print_response(response)
+  #  asynchronous generator
+  try:
+    for chunk in conversation_chain.stream({'question':question}):
+      print(chunk, end="", flush=True)
+  except:
+    print("\n\n==============\n end of stream")
 
-# ask_question("apa itu AI")
 ask_question("what is PKM KI")
+# ask_question("tell me a story")
+# ask_question("apa itu AI")
 
-# # test chat history
-# ask_question("Apa isi pasal 2?")
-# ask_question("apakah ada pasal lain yang berkaitan dengan pasal tersebut?")
