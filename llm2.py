@@ -44,36 +44,24 @@ Question: {question}
 prompt = ChatPromptTemplate.from_template(template)
 
 # LLM
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, streaming=True)
+
+from langchain_core.runnables import RunnablePassthrough
+from langchain_core.output_parsers import StrOutputParser
 
 # Chain
-chain = prompt | llm
+def get_stream_chain():
+  return (
+  {"context": retriever, "question": RunnablePassthrough()}
+  | prompt 
+  | llm 
+  | StrOutputParser()
+)
+chain = get_stream_chain()
 
 # Run
-# print(chain.invoke({"context": doc, "question": question}))
+# for chunk in chain.stream(question):
+        # content = chunk.replace("\n", "<br>")
+        # print(chunk)
 
-# ==================== message history ==================== # 
-from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_core.chat_history import BaseChatMessageHistory
-from langchain_core.runnables.history import RunnableWithMessageHistory
-from langchain_core.messages import HumanMessage
-from langchain_core.runnables import RunnableParallel
-
-store={}
-
-def get_session_history(session_id: str) -> BaseChatMessageHistory:
-    if session_id not in store:
-        store[session_id] = ChatMessageHistory()
-    return store[session_id]
-
-
-chain = RunnableParallel({"output_message": ChatOpenAI()})
-with_message_history = RunnableWithMessageHistory(
-    chain,
-    get_session_history,
-    input_messages_key="input",
-    history_messages_key="history",
-)
-
-print(with_message_history.invoke({"input": question, "history": []},
-    config={"configurable": {"session_id": "baz"}}))
+# print(chain.stream(question))

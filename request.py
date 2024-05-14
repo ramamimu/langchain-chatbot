@@ -9,7 +9,7 @@ url = f"http://localhost:{PORT}"
 
 def get_stream(url):
     s = requests.Session()
-    with s.post(url, headers=None, stream=True, json={'question': 'hello', 'sid': '123a'}) as resp:
+    with s.post(url, headers=None, stream=True, json={'question': 'Apa nama kegiatan tersebut?', 'sid': '123c'}) as resp:
         for line in resp.iter_lines():
             if line:
               yield line.decode('utf-8')

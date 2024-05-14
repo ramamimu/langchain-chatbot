@@ -89,11 +89,15 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 
 from langchain_core.output_parsers import StrOutputParser
 
-conversation_chain = ConversationalRetrievalChain.from_llm(
+def create_stream_chain():
+  return  ConversationalRetrievalChain.from_llm(
     llm=get_llm(),
     retriever=vectorstore.as_retriever(),
     memory=memory,
-) | StrOutputParser()
+) 
+# | StrOutputParser()
+
+conversation_chain = create_stream_chain()
 
 # solver: https://medium.com/llm-projects/langchain-openai-streaming-101-in-python-edd60e84c9ca
 
@@ -101,6 +105,7 @@ def ask_question(question):
   #  asynchronous generator
   try:
     for chunk in conversation_chain.stream({'question':question}):
+      print("masuk")
       print(chunk, end="", flush=True)
   except:
     print("\n\n==============\n end of stream")
