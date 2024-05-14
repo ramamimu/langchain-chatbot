@@ -24,6 +24,26 @@ async def ask_question(item: Question):
     chain = chain_store[item.sid]
     return chain(key)
 
+import random
+from lorem_text import lorem
+import asyncio
+from typing import List
+from sse_starlette.sse import EventSourceResponse
+
+async def lorem_generator():
+  randomizer = random.randint(1, 5)
+  lorem_text:str = lorem.paragraphs(randomizer)
+  splitted_lorem:List[str] = lorem_text.split(' ')
+  
+  new_text = ""
+  for i in splitted_lorem:
+    new_text += f"{i} "
+    yield f"{i} "
+    await asyncio.sleep(0.1)
+
+@app.post("/ask/stream")
+async def generate_stream(item: Question):
+    return EventSourceResponse(lorem_generator(), media_type='text/event-stream')
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=7000)
