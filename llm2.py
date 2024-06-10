@@ -1,3 +1,4 @@
+import datetime
 import os
 from dotenv import load_dotenv
 
@@ -49,6 +50,7 @@ llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, streaming=True)
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
+print("start init: ", datetime.datetime.now())
 # Chain
 def get_stream_chain():
   return (
@@ -58,6 +60,7 @@ def get_stream_chain():
   | StrOutputParser()
 )
 chain = get_stream_chain()
+print("finish init: ", datetime.datetime.now())
 
 # Run
 # for chunk in chain.stream(question):
