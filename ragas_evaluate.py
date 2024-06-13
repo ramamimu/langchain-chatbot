@@ -1,4 +1,6 @@
-import time
+from dotenv import load_dotenv
+load_dotenv()
+
 from datasets import Dataset 
 # import metrics
 from ragas.metrics import (
@@ -10,6 +12,7 @@ from ragas.metrics import (
 from ragas import evaluate
 import pandas as pd
 import ast
+from models import models, ModelName, dataset_iftegration
 
 def evaluate_result(context_path: str, file_to_save_path: str):
   print("================= START EVALUATE =================")
@@ -44,64 +47,20 @@ def evaluate_result(context_path: str, file_to_save_path: str):
   print(f"success collecting {context_path}")
   print("================= FINISH EVALUATE =================")
 
-list_path = [
-  {
-    "path": 'akademik',
-    "is_finished": True
-  },
-  {
-    "path": 'akademik s1',
-    "is_finished": True
-  },
-  {
-    "path": 'akademik s2',
-    "is_finished": True
-  },
-  {
-    "path": 'beasiswa',
-    "is_finished": True
-  },
-  {
-    "path": 'dana pendidikan',
-    "is_finished": True
-  },
-  {
-    "path": 'kerja praktik',
-    "is_finished": False
-  },
-  {
-    "path": 'magang',
-    "is_finished": False
-  },
-  {
-    "path": 'MBKM',
-    "is_finished": False
-  },
-  {
-    "path": 'program internasional',
-    "is_finished": False
-  },
-  {
-    "path": 'SKEM',
-    "is_finished": False
-  },
-  {
-    "path": 'tesis',
-    "is_finished": False
-  },
-  {
-    "path": 'wisuda',
-    "is_finished": False
-  },
-  {
-    "path": 'yudisium dan tugas akhir',
-    "is_finished": False
-  },
+model_names = [
+  ModelName.MULTILINGUAL_MINILM_FINETUNING.value,
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_2.value,
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_3.value,
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_4.value,
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_5.value,
+  ModelName.INDO_SENTENCE.value,
+  ModelName.MINILLM_V6.value,
+  ModelName.MPNET_BASE2.value,
+  ModelName.MULTILINGUAL_MINILM.value,
+  ModelName.MULTILINGUAL_E5_SMALL.value,
+  ModelName.LABSE.value
 ]
 
-for i in list_path:
-  if i['is_finished']: 
-    continue
-
-  # evaluate_result(f'dataset/{i["path"]}/evaluation context bert.csv', f'dataset/{i["path"]}/evaluation result bert.csv')
-  evaluate_result(f'dataset/{i["path"]}/evaluation context openai.csv', f'dataset/{i["path"]}/evaluation result openai.csv')
+for model_name in model_names:
+  for i in dataset_iftegration:
+    evaluate_result(f'dataset/{i["folder"]}/evaluation context {model_name}.csv', f'dataset/{i["folder"]}/evaluation result {model_name}.csv')

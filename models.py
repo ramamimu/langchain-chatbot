@@ -2,24 +2,26 @@ from enum import Enum
 
 
 class ModelName(Enum):
+  # GPT2="gpt2"
+  # KOMODO="komodo"
+  # MISTRAL="mistral"
+  # LLAMA2="llama2"
+  # SEALION2="sealion"
+  GPT3_TURBO='openai'
   INDO_SENTENCE="indo_sentence"
-  GPT2="gpt2"
-  KOMODO="komodo"
-  MISTRAL="mistral"
-  LLAMA2="llama2"
-  SEALION2="sealion"
   MINILLM_V6="minilm-v6"
   MPNET_BASE2="mpnet-base-v2"
-  MULTILINGUAL_MINILM="multilingual-minilm"
   LABSE="labse"
-  NOMIC_EMBED="nomic-embed"
   MULTILINGUAL_E5_SMALL="multilingual-e5-small"
+  MULTILINGUAL_MINILM="multilingual-minilm"
+  MULTILINGUAL_MINILM_FINETUNING="multilingual-minilm-finetuning"
+  MULTILINGUAL_MINILM_FINETUNING_2="multilingual-minilm-finetuning-2"
+  MULTILINGUAL_MINILM_FINETUNING_3="multilingual-minilm-finetuning-3"
+  MULTILINGUAL_MINILM_FINETUNING_4="multilingual-minilm-finetuning-4"
+  MULTILINGUAL_MINILM_FINETUNING_5="multilingual-minilm-finetuning-5"
+  MULTILINGUAL_MINILM_FINETUNING_6="multilingual-minilm-finetuning-6"
 
 models = {
-  ModelName.INDO_SENTENCE.value: {
-    "repo_id": "firqaaa/indo-sentence-bert-base",
-    "local_dir": "./app/model/modules/indo-sentence-bert-base"
-  },
   # ModelName.GPT2.value: {
   #   "repo_id": "openai-community/gpt2",
   #   "local_dir": "./app/model/modules/gpt2"
@@ -40,6 +42,10 @@ models = {
   #   "repo_id": "aisingapore/sea-lion-7b-instruct",
   #   "local_dir": "./app/model/modules/sealion"
   # },
+  ModelName.INDO_SENTENCE.value: {
+    "repo_id": "firqaaa/indo-sentence-bert-base",
+    "local_dir": "./app/model/modules/indo-sentence-bert-base"
+  },
   ModelName.MINILLM_V6.value: {
     "repo_id": "sentence-transformers/all-MiniLM-L6-v2",
     "local_dir": "./app/model/modules/all-minilm"
@@ -52,14 +58,34 @@ models = {
     "repo_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
     "local_dir": "./app/model/modules/multilingual-minilm"
   },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_2.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-2"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_3.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-3"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_4.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-4"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_5.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-5"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_6.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-6"
+  },
   ModelName.LABSE.value: {
     "repo_id": "sentence-transformers/LaBSE",
     "local_dir": "./app/model/modules/labse"
   },
-  # ModelName.NOMIC_EMBED.value: {
-  #   "repo_id": "nomic-ai/nomic-embed-text-v1.5",
-  #   "local_dir": "./app/model/modules/nomic_embed"
-  # },
   ModelName.MULTILINGUAL_E5_SMALL.value: {
     "repo_id": "intfloat/multilingual-e5-small",
     "local_dir": "./app/model/modules/multilingual-e5-small"
@@ -68,3 +94,70 @@ models = {
 
 # labse berat
 # nomic failed to fulfill evaluation due to run out of GPU memory in IndonesianMongabayConservationClassification task
+
+dataset_iftegration = [
+  {
+    "folder": "akademik",
+    "file": "akademik.csv"
+  },
+  # {
+  #   "folder": "akademik s1",
+  #   "file": "Akademik S1.csv"
+  # },
+  # {
+  #   "folder": "akademik s2",
+  #   "file": "Akademik S2.csv"
+  # },
+  # {
+  #   "folder": "beasiswa",
+  #   "file": "beasiswa.csv"
+  # },
+  # {
+  #   "folder": "dana pendidikan",
+  #   "file": "dana pendidikan.csv"
+  # },
+  # {
+  #   "folder": "kerja praktik",
+  #   "file": "kerja praktik.csv"
+  # },
+  # {
+  #   "folder": "magang",
+  #   "file": "magang.csv"
+  # },
+  # {
+  #   "folder": "MBKM",
+  #   "file": "MBKM.csv"
+  # },
+  # {
+  #   "folder": "program internasional",
+  #   "file": "program internasional.csv"
+  # },
+  # {
+  #   "folder": "SKEM",
+  #   "file": "SKEM.csv"
+  # },
+  # {
+  #   "folder": "tesis",
+  #   "file": "tesis.csv"
+  # },  
+  # {
+  #   "folder": "wisuda",
+  #   "file": "wisuda.csv"
+  # },  
+  # {
+  #   "folder": "yudisium dan tugas akhir",
+  #   "file": "yudisium dan tugas akhir.csv"
+  # },
+  # {
+  #   "folder": "akademik luar kampus",
+  #   "file": "akademik luar kampus.csv"
+  # },
+  # {
+  #   "folder": "yudisium",
+  #   "file": "yudisium.csv"
+  # },
+  # {
+  #   "folder": "dana perkuliahan",
+  #   "file": "dana perkuliahan.csv"
+  # },
+]

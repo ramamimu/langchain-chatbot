@@ -28,9 +28,6 @@ def print_response(response):
 vectorstore = get_embeddings("app/embeddings")
 retriever=vectorstore.as_retriever(search_kwargs={"k": 1})
 
-# ==================== ## ==================== # 
-question="tahun berapa dokumen dibuat?"
-doc=retriever.get_relevant_documents(question)
 
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -62,9 +59,14 @@ def get_stream_chain():
 chain = get_stream_chain()
 print("finish init: ", datetime.datetime.now())
 
+
+# ==================== ## ==================== # 
+question="tahun berapa dokumen dibuat?"
+doc=retriever.get_relevant_documents(question)
+
 # Run
-# for chunk in chain.stream(question):
-        # content = chunk.replace("\n", "<br>")
-        # print(chunk)
+for chunk in chain.stream(question):
+        content = chunk.replace("\n", "<br>")
+        print(chunk)
 
 # print(chain.stream(question))

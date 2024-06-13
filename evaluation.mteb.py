@@ -1,12 +1,11 @@
 from typing import List
 from mteb import MTEB
 from sentence_transformers import SentenceTransformer
-from models import models
+from models import models, ModelName
 
 def mteb_evaluate(model_name:str, tasks: List[str]):
     model_path = models[model_name]["local_dir"]
     model = SentenceTransformer(model_path, trust_remote_code=True)
-
 
     # Create MTEB evaluation instance with specific tasks
     evaluation = MTEB(tasks=specific_tasks)
@@ -24,7 +23,8 @@ def mteb_evaluate(model_name:str, tasks: List[str]):
 # https://github.com/embeddings-benchmark/mteb/blob/main/docs/tasks.md
 # MULTILINGUAL_E5_SMALL best in task IndonesianIdClickbaitClassification
 # multilingual minilm best in task IndonesianMongabayConservationClassification
-specific_tasks = ["STSBenchmark", "IndonesianIdClickbaitClassification", "IndonesianMongabayConservationClassification"]
+specific_tasks = ["STSBenchmark"]
 for mdl in models.keys():
     print(f"evaluate {mdl}")
     mteb_evaluate(mdl, specific_tasks)
+

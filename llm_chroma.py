@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+load_dotenv()
 
 from app.embeddings import get_embeddings
 from app.llm import get_chain_context_huggingface, gptq, tokenizer
@@ -14,7 +15,6 @@ from huggingface_hub import login
 import torch
 from embed_chroma import chromavs
 
-load_dotenv()
 HUGGINGFACEHUB_API_TOKEN = os.getenv('HUGGINGFACEHUB_API_TOKEN')
 login(HUGGINGFACEHUB_API_TOKEN)
 
