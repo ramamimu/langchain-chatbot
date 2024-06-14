@@ -20,6 +20,12 @@ class ModelName(Enum):
   MULTILINGUAL_MINILM_FINETUNING_4="multilingual-minilm-finetuning-4"
   MULTILINGUAL_MINILM_FINETUNING_5="multilingual-minilm-finetuning-5"
   MULTILINGUAL_MINILM_FINETUNING_6="multilingual-minilm-finetuning-6"
+  MULTILINGUAL_E5_SMALL_FINETUNING_1="multilingual-e5-small-finetuning-1"
+  MULTILINGUAL_E5_SMALL_FINETUNING_2="multilingual-e5-small-finetuning-2"
+  MULTILINGUAL_E5_SMALL_FINETUNING_3="multilingual-e5-small-finetuning-3"
+  MULTILINGUAL_E5_SMALL_FINETUNING_4="multilingual-e5-small-finetuning-4"
+  MULTILINGUAL_E5_SMALL_FINETUNING_5="multilingual-e5-small-finetuning-5"
+  MULTILINGUAL_E5_SMALL_FINETUNING_6="multilingual-e5-small-finetuning-6"
 
 models = {
   # ModelName.GPT2.value: {
@@ -58,6 +64,14 @@ models = {
     "repo_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
     "local_dir": "./app/model/modules/multilingual-minilm"
   },
+  ModelName.LABSE.value: {
+    "repo_id": "sentence-transformers/LaBSE",
+    "local_dir": "./app/model/modules/labse"
+  },
+  ModelName.MULTILINGUAL_E5_SMALL.value: {
+    "repo_id": "intfloat/multilingual-e5-small",
+    "local_dir": "./app/model/modules/multilingual-e5-small"
+  },
   ModelName.MULTILINGUAL_MINILM_FINETUNING.value: {
     "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
     "local_dir": "./app/model/modules/multilingual-minilm-finetuning"
@@ -82,14 +96,30 @@ models = {
     "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
     "local_dir": "./app/model/modules/multilingual-minilm-finetuning-6"
   },
-  ModelName.LABSE.value: {
-    "repo_id": "sentence-transformers/LaBSE",
-    "local_dir": "./app/model/modules/labse"
-  },
-  ModelName.MULTILINGUAL_E5_SMALL.value: {
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_1.value: {
     "repo_id": "intfloat/multilingual-e5-small",
-    "local_dir": "./app/model/modules/multilingual-e5-small"
-  }
+    "local_dir": "./app/model/modules/multilingual-e5-small-finetuning-1"
+  },
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_2.value: {
+    "repo_id": "intfloat/multilingual-e5-small",
+    "local_dir": "./app/model/modules/multilingual-e5-small-finetuning-2"
+  },
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_3.value: {
+    "repo_id": "intfloat/multilingual-e5-small",
+    "local_dir": "./app/model/modules/multilingual-e5-small-finetuning-3"
+  },
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_4.value: {
+    "repo_id": "intfloat/multilingual-e5-small",
+    "local_dir": "./app/model/modules/multilingual-e5-small-finetuning-4"
+  },
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_5.value: {
+    "repo_id": "intfloat/multilingual-e5-small",
+    "local_dir": "./app/model/modules/multilingual-e5-small-finetuning-5"
+  },
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_6.value: {
+    "repo_id": "intfloat/multilingual-e5-small",
+    "local_dir": "./app/model/modules/multilingual-e5-small-finetuning-6"
+  },
 }
 
 # labse berat
@@ -100,14 +130,30 @@ dataset_iftegration = [
     "folder": "akademik",
     "file": "akademik.csv"
   },
-  # {
-  #   "folder": "akademik s1",
-  #   "file": "Akademik S1.csv"
-  # },
-  # {
-  #   "folder": "akademik s2",
-  #   "file": "Akademik S2.csv"
-  # },
+  {
+    "folder": "program internasional",
+    "file": "program internasional.csv"
+  },
+  {
+    "folder": "akademik luar kampus",
+    "file": "akademik luar kampus.csv"
+  },
+  {
+    "folder": "yudisium",
+    "file": "yudisium.csv"
+  },
+  {
+    "folder": "dana perkuliahan",
+    "file": "dana perkuliahan.csv"
+  },
+  {
+    "folder": "akademik s1",
+    "file": "Akademik S1.csv"
+  },
+  {
+    "folder": "akademik s2",
+    "file": "Akademik S2.csv"
+  },
   # {
   #   "folder": "beasiswa",
   #   "file": "beasiswa.csv"
@@ -129,10 +175,6 @@ dataset_iftegration = [
   #   "file": "MBKM.csv"
   # },
   # {
-  #   "folder": "program internasional",
-  #   "file": "program internasional.csv"
-  # },
-  # {
   #   "folder": "SKEM",
   #   "file": "SKEM.csv"
   # },
@@ -147,17 +189,5 @@ dataset_iftegration = [
   # {
   #   "folder": "yudisium dan tugas akhir",
   #   "file": "yudisium dan tugas akhir.csv"
-  # },
-  # {
-  #   "folder": "akademik luar kampus",
-  #   "file": "akademik luar kampus.csv"
-  # },
-  # {
-  #   "folder": "yudisium",
-  #   "file": "yudisium.csv"
-  # },
-  # {
-  #   "folder": "dana perkuliahan",
-  #   "file": "dana perkuliahan.csv"
   # },
 ]

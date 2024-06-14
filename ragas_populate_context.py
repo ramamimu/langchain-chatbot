@@ -23,9 +23,21 @@ def get_embedding_model(model_name: str = ModelName.GPT3_TURBO.value):
 def get_vectorstore(embedding_model, fvs_init_path, df_dataset):
   faiss = None
 
+  done = []
   for _, row in df_dataset.iterrows():
     title = row['Judul']
-    faiss = FAISS.load_local(folder_path=f"{fvs_init_path}/{title}", embeddings=embedding_model, allow_dangerous_deserialization=True)
+    print(title)
+
+    if title not in done:
+      folder_path=f"{fvs_init_path}/{title}"
+      if not faiss:
+        faiss = FAISS.load_local(folder_path=folder_path, embeddings=embedding_model, allow_dangerous_deserialization=True)
+      else:
+        temp_faiss = FAISS.load_local(folder_path=folder_path, embeddings=embedding_model, allow_dangerous_deserialization=True)
+        faiss.merge_from(temp_faiss)
+      done.append(title)
+    else:
+      print(">>>>> skipped")
 
   return faiss
 
@@ -131,30 +143,33 @@ def calculate_context(df_dataset_path, df_qa_path, embedding_model_name, save_lo
   print(f"{df_dataset_path} saved into {save_local_path}")
 
 model_names = [
+  ModelName.INDO_SENTENCE.value,
+  ModelName.MINILLM_V6.value,
+  ModelName.MPNET_BASE2.value,
+  ModelName.MULTILINGUAL_MINILM.value,
+  ModelName.LABSE.value,
+  ModelName.MULTILINGUAL_E5_SMALL.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING_2.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING_3.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING_4.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING_5.value,
-  ModelName.INDO_SENTENCE.value,
-  ModelName.MINILLM_V6.value,
-  ModelName.MPNET_BASE2.value,
-  ModelName.MULTILINGUAL_MINILM.value,
-  ModelName.MULTILINGUAL_E5_SMALL.value,
-  ModelName.LABSE.value
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_1.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_2.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_3.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_4.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_5.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_6.value
 ]
 
 # embedding_model_name = ModelName.GPT3_TURBO.value
 for embedding_model_name in model_names:
   print(f"============ Populate {embedding_model_name} ============")
-  # for item in dataset_iftegration:
-  item =   {
-    "folder": "akademik",
-    "file": "akademik.csv"
-  }
-  calculate_context(
-    f'dataset/{item["folder"]}/Dataset IF-Tegration - {item["file"]}',
-    f'dataset/{item["folder"]}/QA Generator - {item["file"]}',
-    embedding_model_name,
-    f'dataset/{item["folder"]}/evaluation context {embedding_model_name}.csv'
-  )
+  for item in dataset_iftegration:
+    print(f"============ {item} ============")
+    calculate_context(
+      f'dataset/{item["folder"]}/Dataset IF-Tegration - {item["file"]}',
+      f'dataset/{item["folder"]}/QA Generator - {item["file"]}',
+      embedding_model_name,
+      f'dataset/{item["folder"]}/evaluation context {embedding_model_name}.csv'
+    )

@@ -6,17 +6,12 @@ from models import ModelName, models
 from langchain.embeddings.openai import OpenAIEmbeddings
 
 model_names = [
-  ModelName.MULTILINGUAL_MINILM_FINETUNING.value,
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_2.value,
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_3.value,
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_4.value,
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_5.value,
-  ModelName.INDO_SENTENCE.value,
-  ModelName.MINILLM_V6.value,
-  ModelName.MPNET_BASE2.value,
-  ModelName.MULTILINGUAL_MINILM.value,
-  ModelName.MULTILINGUAL_E5_SMALL.value,
-  ModelName.LABSE.value
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_1.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_2.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_3.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_4.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_5.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_6.value,
 ]
 for model_name in model_names:
   embedding_model = OpenAIEmbeddings() if model_name == ModelName.GPT3_TURBO.value else load_model(models[model_name]["local_dir"])
@@ -77,18 +72,18 @@ for model_name in model_names:
   df_dana_perkuliahan = pd.read_csv('dataset/dana perkuliahan/Dataset IF-Tegration - dana perkuliahan.csv')
 
   start_embed(df_akademik)
-  # start_embed(df_akademik_s1)
-  # start_embed(df_akademik_s2)
-  # start_embed(df_beasiswa)
-  # start_embed(df_dana_pendidikan)
-  # start_embed(df_kerja_praktik)
-  # start_embed(df_magang)
-  # start_embed(df_MBKM)
-  # start_embed(df_program_internasional)
-  # start_embed(df_SKEM)
-  # start_embed(df_tesis)
-  # start_embed(df_wisuda)
-  # start_embed(df_yudisium_dan_tugas_akhir)
-  # start_embed(df_akademik_luar_kampus)
-  # start_embed(df_yudisium)
-  # start_embed(df_dana_perkuliahan)
+  start_embed(df_akademik_luar_kampus)
+  start_embed(df_yudisium)
+  start_embed(df_dana_perkuliahan)
+  start_embed(df_program_internasional)
+  start_embed(df_akademik_s1)
+  start_embed(df_akademik_s2)
+  start_embed(df_beasiswa)
+  start_embed(df_dana_pendidikan)
+  start_embed(df_kerja_praktik)
+  start_embed(df_magang)
+  start_embed(df_MBKM)
+  start_embed(df_SKEM)
+  start_embed(df_tesis)
+  start_embed(df_wisuda)
+  start_embed(df_yudisium_dan_tugas_akhir)

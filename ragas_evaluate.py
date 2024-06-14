@@ -48,17 +48,23 @@ def evaluate_result(context_path: str, file_to_save_path: str):
   print("================= FINISH EVALUATE =================")
 
 model_names = [
+  ModelName.INDO_SENTENCE.value,
+  ModelName.MINILLM_V6.value,
+  ModelName.MPNET_BASE2.value,
+  ModelName.MULTILINGUAL_MINILM.value,
+  ModelName.LABSE.value,
+  ModelName.MULTILINGUAL_E5_SMALL.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING_2.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING_3.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING_4.value,
   ModelName.MULTILINGUAL_MINILM_FINETUNING_5.value,
-  ModelName.INDO_SENTENCE.value,
-  ModelName.MINILLM_V6.value,
-  ModelName.MPNET_BASE2.value,
-  ModelName.MULTILINGUAL_MINILM.value,
-  ModelName.MULTILINGUAL_E5_SMALL.value,
-  ModelName.LABSE.value
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_1.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_2.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_3.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_4.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_5.value,
+  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_6.value
 ]
 
 for model_name in model_names:

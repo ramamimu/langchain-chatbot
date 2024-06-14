@@ -107,5 +107,6 @@ for chunk in chain.stream(
       if chunk:
         content = chunk.replace("\n", "")
         text += content
-        print("\n")
-        print(text)
+
+print("\n=========== second question ===========")
+print(text)
