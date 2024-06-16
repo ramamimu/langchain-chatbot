@@ -33,7 +33,7 @@ models = {
   #   "local_dir": "./app/model/modules/gpt2"
   # },
   # ModelName.KOMODO.value: {
-  #   "repo_id": "Yellow-AI-NLP/komodo-7b-base",
+  #   "repo_id": "Yellow-AI-NLP`/komodo-7b-base",
   #   "local_dir": "./app/model/modules/komodo"
   # },
   # ModelName.MISTRAL.value: {
@@ -48,54 +48,54 @@ models = {
   #   "repo_id": "aisingapore/sea-lion-7b-instruct",
   #   "local_dir": "./app/model/modules/sealion"
   # },
-  # ModelName.INDO_SENTENCE.value: {
-  #   "repo_id": "firqaaa/indo-sentence-bert-base",
-  #   "local_dir": "./app/model/modules/indo-sentence-bert-base"
-  # },
-  # ModelName.MINILLM_V6.value: {
-  #   "repo_id": "sentence-transformers/all-MiniLM-L6-v2",
-  #   "local_dir": "./app/model/modules/all-minilm"
-  # },
-  # ModelName.MPNET_BASE2.value: {
-  #   "repo_id": "sentence-transformers/all-mpnet-base-v2",
-  #   "local_dir": "./app/model/modules/mpnet-base-v2"
-  # },
-  # ModelName.MULTILINGUAL_MINILM.value: {
-  #   "repo_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
-  #   "local_dir": "./app/model/modules/multilingual-minilm"
-  # },
-  # ModelName.LABSE.value: {
-  #   "repo_id": "sentence-transformers/LaBSE",
-  #   "local_dir": "./app/model/modules/labse"
-  # },
-  # ModelName.MULTILINGUAL_E5_SMALL.value: {
-  #   "repo_id": "intfloat/multilingual-e5-small",
-  #   "local_dir": "./app/model/modules/multilingual-e5-small"
-  # },
-  # ModelName.MULTILINGUAL_MINILM_FINETUNING.value: {
-  #   "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
-  #   "local_dir": "./app/model/modules/multilingual-minilm-finetuning"
-  # },
-  # ModelName.MULTILINGUAL_MINILM_FINETUNING_2.value: {
-  #   "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
-  #   "local_dir": "./app/model/modules/multilingual-minilm-finetuning-2"
-  # },
-  # ModelName.MULTILINGUAL_MINILM_FINETUNING_3.value: {
-  #   "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
-  #   "local_dir": "./app/model/modules/multilingual-minilm-finetuning-3"
-  # },
-  # ModelName.MULTILINGUAL_MINILM_FINETUNING_4.value: {
-  #   "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
-  #   "local_dir": "./app/model/modules/multilingual-minilm-finetuning-4"
-  # },
-  # ModelName.MULTILINGUAL_MINILM_FINETUNING_5.value: {
-  #   "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
-  #   "local_dir": "./app/model/modules/multilingual-minilm-finetuning-5"
-  # },
-  # ModelName.MULTILINGUAL_MINILM_FINETUNING_6.value: {
-  #   "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
-  #   "local_dir": "./app/model/modules/multilingual-minilm-finetuning-6"
-  # },
+  ModelName.INDO_SENTENCE.value: {
+    "repo_id": "firqaaa/indo-sentence-bert-base",
+    "local_dir": "./app/model/modules/indo-sentence-bert-base"
+  },
+  ModelName.MINILLM_V6.value: {
+    "repo_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "local_dir": "./app/model/modules/all-minilm"
+  },
+  ModelName.MPNET_BASE2.value: {
+    "repo_id": "sentence-transformers/all-mpnet-base-v2",
+    "local_dir": "./app/model/modules/mpnet-base-v2"
+  },
+  ModelName.MULTILINGUAL_MINILM.value: {
+    "repo_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm"
+  },
+  ModelName.LABSE.value: {
+    "repo_id": "sentence-transformers/LaBSE",
+    "local_dir": "./app/model/modules/labse"
+  },
+  ModelName.MULTILINGUAL_E5_SMALL.value: {
+    "repo_id": "intfloat/multilingual-e5-small",
+    "local_dir": "./app/model/modules/multilingual-e5-small"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_2.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-2"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_3.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-3"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_4.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-4"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_5.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-5"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_6.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-6"
+  },
   ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_1.value: {
     "repo_id": "intfloat/multilingual-e5-small",
     "local_dir": "./app/model/modules/multilingual-e5-small-finetuning-1"
@@ -127,33 +127,41 @@ models = {
 
 dataset_iftegration = [
   {
-    "folder": "akademik",
-    "file": "akademik.csv"
+    "folder": "international exposure id",
+    "file": "international expo.csv"
   },
   {
-    "folder": "program internasional",
-    "file": "program internasional.csv"
+    "folder": "international exposure en",
+    "file": "international expo.csv"
   },
-  {
-    "folder": "akademik luar kampus",
-    "file": "akademik luar kampus.csv"
-  },
-  {
-    "folder": "yudisium",
-    "file": "yudisium.csv"
-  },
-  {
-    "folder": "dana perkuliahan",
-    "file": "dana perkuliahan.csv"
-  },
-  {
-    "folder": "akademik s1",
-    "file": "Akademik S1.csv"
-  },
-  {
-    "folder": "akademik s2",
-    "file": "Akademik S2.csv"
-  },
+  # {
+  #   "folder": "akademik",
+  #   "file": "akademik.csv"
+  # },
+  # {
+  #   "folder": "program internasional",
+  #   "file": "program internasional.csv"
+  # },
+  # {
+  #   "folder": "akademik luar kampus",
+  #   "file": "akademik luar kampus.csv"
+  # },
+  # {
+  #   "folder": "yudisium",
+  #   "file": "yudisium.csv"
+  # },
+  # {
+  #   "folder": "dana perkuliahan",
+  #   "file": "dana perkuliahan.csv"
+  # },
+  # {
+  #   "folder": "akademik s1",
+  #   "file": "Akademik S1.csv"
+  # },
+  # {
+  #   "folder": "akademik s2",
+  #   "file": "Akademik S2.csv"
+  # },
   # {
   #   "folder": "beasiswa",
   #   "file": "beasiswa.csv"
