@@ -14,6 +14,7 @@ class ModelName(Enum):
   LABSE="labse"
   MULTILINGUAL_E5_SMALL="multilingual-e5-small"
   MULTILINGUAL_MINILM="multilingual-minilm"
+  MULTILINGUAL_MINILM_FINETUNING_EARLY_STOP="multilingual-minilm-finetuning-early-stop"
   MULTILINGUAL_MINILM_FINETUNING="multilingual-minilm-finetuning"
   MULTILINGUAL_MINILM_FINETUNING_2="multilingual-minilm-finetuning-2"
   MULTILINGUAL_MINILM_FINETUNING_3="multilingual-minilm-finetuning-3"
@@ -120,6 +121,10 @@ models = {
     "repo_id": "intfloat/multilingual-e5-small",
     "local_dir": "./app/model/modules/multilingual-e5-small-finetuning-6"
   },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_EARLY_STOP.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-earlystop"
+  }
 }
 
 # labse berat
