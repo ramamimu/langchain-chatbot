@@ -21,6 +21,11 @@ class ModelName(Enum):
   MULTILINGUAL_MINILM_FINETUNING_4="multilingual-minilm-finetuning-4"
   MULTILINGUAL_MINILM_FINETUNING_5="multilingual-minilm-finetuning-5"
   MULTILINGUAL_MINILM_FINETUNING_6="multilingual-minilm-finetuning-6"
+  MULTILINGUAL_MINILM_FINETUNING_137="multilingual-minilm-finetuning-137"
+  MULTILINGUAL_MINILM_FINETUNING_239="multilingual-minilm-finetuning-239"
+  MULTILINGUAL_MINILM_FINETUNING_97_1e06="multilingual-minilm-finetuning-97-1e-06"
+  MULTILINGUAL_MINILM_FINETUNING_26_1e03="multilingual-minilm-finetuning-26-1e-03"
+  MULTILINGUAL_MINILM_FINETUNING_192_b8="multilingual-minilm-finetuning-192-b8"
   MULTILINGUAL_E5_SMALL_FINETUNING_1="multilingual-e5-small-finetuning-1"
   MULTILINGUAL_E5_SMALL_FINETUNING_2="multilingual-e5-small-finetuning-2"
   MULTILINGUAL_E5_SMALL_FINETUNING_3="multilingual-e5-small-finetuning-3"
@@ -124,7 +129,27 @@ models = {
   ModelName.MULTILINGUAL_MINILM_FINETUNING_EARLY_STOP.value: {
     "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
     "local_dir": "./app/model/modules/multilingual-minilm-earlystop"
-  }
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_137.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-137"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_239.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-239"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_97_1e06.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": "./app/model/modules/multilingual-minilm-finetuning-97-1e-06"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_26_1e03.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": f"./app/model/modules/{ModelName.MULTILINGUAL_MINILM_FINETUNING_26_1e03.value}"
+  },
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_192_b8.value: {
+    "repo_id": "ramamimu/finetuning-MiniLM-L12-v2",
+    "local_dir": f"./app/model/modules/{ModelName.MULTILINGUAL_MINILM_FINETUNING_192_b8.value}"
+  },
 }
 
 # labse berat
@@ -139,34 +164,34 @@ dataset_iftegration = [
     "folder": "international exposure en",
     "file": "international expo.csv"
   },
-  # {
-  #   "folder": "akademik",
-  #   "file": "akademik.csv"
-  # },
-  # {
-  #   "folder": "program internasional",
-  #   "file": "program internasional.csv"
-  # },
-  # {
-  #   "folder": "akademik luar kampus",
-  #   "file": "akademik luar kampus.csv"
-  # },
-  # {
-  #   "folder": "yudisium",
-  #   "file": "yudisium.csv"
-  # },
-  # {
-  #   "folder": "dana perkuliahan",
-  #   "file": "dana perkuliahan.csv"
-  # },
-  # {
-  #   "folder": "akademik s1",
-  #   "file": "Akademik S1.csv"
-  # },
-  # {
-  #   "folder": "akademik s2",
-  #   "file": "Akademik S2.csv"
-  # },
+  {
+    "folder": "akademik",
+    "file": "akademik.csv"
+  },
+  {
+    "folder": "program internasional",
+    "file": "program internasional.csv"
+  },
+  {
+    "folder": "akademik luar kampus",
+    "file": "akademik luar kampus.csv"
+  },
+  {
+    "folder": "yudisium",
+    "file": "yudisium.csv"
+  },
+  {
+    "folder": "dana perkuliahan",
+    "file": "dana perkuliahan.csv"
+  },
+  {
+    "folder": "akademik s1",
+    "file": "Akademik S1.csv"
+  },
+  {
+    "folder": "akademik s2",
+    "file": "Akademik S2.csv"
+  },
   # {
   #   "folder": "beasiswa",
   #   "file": "beasiswa.csv"

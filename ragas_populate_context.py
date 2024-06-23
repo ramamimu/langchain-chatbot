@@ -143,23 +143,7 @@ def calculate_context(df_dataset_path, df_qa_path, embedding_model_name, save_lo
   print(f"{df_dataset_path} saved into {save_local_path}")
 
 model_names = [
-  ModelName.INDO_SENTENCE.value,
-  ModelName.MINILLM_V6.value,
-  ModelName.MPNET_BASE2.value,
-  ModelName.MULTILINGUAL_MINILM.value,
-  ModelName.LABSE.value,
-  ModelName.MULTILINGUAL_E5_SMALL.value,
-  ModelName.MULTILINGUAL_MINILM_FINETUNING.value,
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_2.value,
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_3.value,
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_4.value,
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_5.value,
-  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_1.value,
-  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_2.value,
-  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_3.value,
-  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_4.value,
-  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_5.value,
-  ModelName.MULTILINGUAL_E5_SMALL_FINETUNING_6.value
+  ModelName.MULTILINGUAL_MINILM_FINETUNING_192_b8.value
 ]
 
 # embedding_model_name = ModelName.GPT3_TURBO.value
