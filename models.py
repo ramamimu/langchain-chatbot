@@ -156,42 +156,42 @@ models = {
 # nomic failed to fulfill evaluation due to run out of GPU memory in IndonesianMongabayConservationClassification task
 
 dataset_iftegration = [
-  {
-    "folder": "international exposure id",
-    "file": "international expo.csv"
-  },
-  {
-    "folder": "international exposure en",
-    "file": "international expo.csv"
-  },
-  {
-    "folder": "akademik",
-    "file": "akademik.csv"
-  },
-  {
-    "folder": "program internasional",
-    "file": "program internasional.csv"
-  },
-  {
-    "folder": "akademik luar kampus",
-    "file": "akademik luar kampus.csv"
-  },
-  {
-    "folder": "yudisium",
-    "file": "yudisium.csv"
-  },
-  {
-    "folder": "dana perkuliahan",
-    "file": "dana perkuliahan.csv"
-  },
+  # {
+  #   "folder": "international exposure id",
+  #   "file": "international expo.csv"
+  # },
+  # {
+  #   "folder": "international exposure en",
+  #   "file": "international expo.csv"
+  # },
+  # {
+  #   "folder": "akademik",
+  #   "file": "akademik.csv"
+  # },
+  # {
+  #   "folder": "program internasional",
+  #   "file": "program internasional.csv"
+  # },
+  # {
+  #   "folder": "akademik luar kampus",
+  #   "file": "akademik luar kampus.csv"
+  # },
+  # {
+  #   "folder": "yudisium",
+  #   "file": "yudisium.csv"
+  # },
+  # {
+  #   "folder": "dana perkuliahan",
+  #   "file": "dana perkuliahan.csv"
+  # },
   {
     "folder": "akademik s1",
     "file": "Akademik S1.csv"
   },
-  {
-    "folder": "akademik s2",
-    "file": "Akademik S2.csv"
-  },
+  # {
+  #   "folder": "akademik s2",
+  #   "file": "Akademik S2.csv"
+  # },
   # {
   #   "folder": "beasiswa",
   #   "file": "beasiswa.csv"

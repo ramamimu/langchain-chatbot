@@ -83,7 +83,7 @@ def get_context_answer(questions, vestorstore, k=3):
   for question in questions:
     contexts = []
 
-    vs_result = vestorstore.similarity_search(question, kwargs={"k": k})
+    vs_result = vestorstore.similarity_search(question, k=k)
     for item in vs_result:
       contexts.append(item.page_content)
 
@@ -126,13 +126,13 @@ def evaluate(questions, ground_truth, contexts, answers, file_to_save_path):
   print(df_evaluation_s1.head())
   df_evaluation_s1.to_csv(file_to_save_path)
 
-def calculate_context(df_dataset_path, df_qa_path, embedding_model_name, save_local_path):
+def calculate_context(df_dataset_path, df_qa_path, embedding_model_name, save_local_path, k=3):
   df_dataset = pd.read_csv(df_dataset_path)
   df_qa = pd.read_csv(df_qa_path)
   embedding_model, model_path = get_embedding_model(embedding_model_name)
   vectorstore = get_vectorstore(embedding_model, model_path, df_dataset)
   questions, expected_answers = get_question_ground_truth_from_dataset(df_qa)
-  contexts, answers = get_context_answer(questions, vectorstore)
+  contexts, answers = get_context_answer(questions, vectorstore, k=k)
   df_contexts = pd.DataFrame({
     'question': questions,
     "ground_truth": expected_answers,
@@ -143,17 +143,24 @@ def calculate_context(df_dataset_path, df_qa_path, embedding_model_name, save_lo
   print(f"{df_dataset_path} saved into {save_local_path}")
 
 model_names = [
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_192_b8.value
+  ModelName.INDO_SENTENCE.value
+]
+
+# default 4
+k_params = [
+  5, 6, 7
 ]
 
 # embedding_model_name = ModelName.GPT3_TURBO.value
 for embedding_model_name in model_names:
   print(f"============ Populate {embedding_model_name} ============")
   for item in dataset_iftegration:
-    print(f"============ {item} ============")
-    calculate_context(
-      f'dataset/{item["folder"]}/Dataset IF-Tegration - {item["file"]}',
-      f'dataset/{item["folder"]}/QA Generator - {item["file"]}',
-      embedding_model_name,
-      f'dataset/{item["folder"]}/evaluation context {embedding_model_name}.csv'
-    )
+    for k in k_params:
+      print(f"============ {item} - k param {k} ============")
+      calculate_context(
+        f'dataset/{item["folder"]}/Dataset IF-Tegration - {item["file"]}',
+        f'dataset/{item["folder"]}/QA Generator - {item["file"]}',
+        embedding_model_name,
+        f'dataset/{item["folder"]}/evaluation context {embedding_model_name}-{k}.csv',
+        k=k
+      )

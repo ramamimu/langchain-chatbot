@@ -48,9 +48,18 @@ def evaluate_result(context_path: str, file_to_save_path: str):
   print("================= FINISH EVALUATE =================")
 
 model_names = [
-  ModelName.MULTILINGUAL_MINILM_FINETUNING_192_b8.value
+  ModelName.INDO_SENTENCE.value
+]
+
+k_params = [
+  5, 6, 7
 ]
 
 for model_name in model_names:
   for i in dataset_iftegration:
-    evaluate_result(f'dataset/{i["folder"]}/evaluation context {model_name}.csv', f'dataset/{i["folder"]}/evaluation result {model_name}.csv')
+    for k in k_params:
+      if k == 4:
+        evaluate_result(f'dataset/{i["folder"]}/evaluation context {model_name}.csv', f'dataset/{i["folder"]}/evaluation result {model_name}.csv')
+      else:
+        evaluate_result(f'dataset/{i["folder"]}/evaluation context {model_name}-{k}.csv', 
+                        f'dataset/{i["folder"]}/evaluation result {model_name}-{k}.csv')
