@@ -1,320 +1,78 @@
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/sentence_transformers/cross_encoder/CrossEncoder.py:11: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-  from tqdm.autonotebook import tqdm, trange
-fine tune epoch 1
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:11<00:00,  3.35it/s]
-{'train_runtime': 11.9558, 'train_samples_per_second': 52.945, 'train_steps_per_second': 3.346, 'train_loss': 0.6152947902679443, 'epoch': 1.0}
-                                                                     
-
-Average Similarity Score (excluding diagonal):
+epoch 1
+{'train_runtime': 11.9558, 'train_samples_per_second': 52.945, 'train_steps_per_second': 3.346, 'train_loss': 0.6152947902679443, 'epoch': 1.0}                                                                     
 0.22913378
-
-==================================================
-
-fine tune epoch 2
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:11<00:00,  3.33it/s]
+epoch 2
 {'train_runtime': 11.9947, 'train_samples_per_second': 52.773, 'train_steps_per_second': 3.335, 'train_loss': 0.14214900732040406, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.23388891
-
-==================================================
-
-fine tune epoch 3
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:12<00:00,  3.32it/s]
+epoch 3
 {'train_runtime': 12.0379, 'train_samples_per_second': 52.584, 'train_steps_per_second': 3.323, 'train_loss': 0.018943460285663606, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.23538308
-
-==================================================
-
-fine tune epoch 4
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:12<00:00,  3.31it/s]
+epoch 4
 {'train_runtime': 12.0801, 'train_samples_per_second': 52.4, 'train_steps_per_second': 3.311, 'train_loss': 0.002620718814432621, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.24115036
-
-==================================================
-
-fine tune epoch 5
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:12<00:00,  3.31it/s]
+epoch 5
 {'train_runtime': 12.083, 'train_samples_per_second': 52.388, 'train_steps_per_second': 3.31, 'train_loss': 0.0020556069910526277, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.24045068
-
-==================================================
-
-fine tune epoch 6
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:12<00:00,  3.30it/s]
+epoch 6
 {'train_runtime': 12.1147, 'train_samples_per_second': 52.251, 'train_steps_per_second': 3.302, 'train_loss': 0.0007639288436621427, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.24969047
-
-==================================================
-
-fine tune epoch 7
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:15<00:00,  2.54it/s]
+epoch 7
 {'train_runtime': 15.7254, 'train_samples_per_second': 40.253, 'train_steps_per_second': 2.544, 'train_loss': 0.0006298827007412911, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.24404007
-
-==================================================
-
-fine tune epoch 8
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:16<00:00,  2.45it/s]
+epoch 8
 {'train_runtime': 16.3547, 'train_samples_per_second': 38.705, 'train_steps_per_second': 2.446, 'train_loss': 0.00043950388208031655, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.2556747
-
-==================================================
-
-fine tune epoch 9
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:16<00:00,  2.43it/s]
+epoch 9
 {'train_runtime': 16.4495, 'train_samples_per_second': 38.481, 'train_steps_per_second': 2.432, 'train_loss': 2.8764500166289507e-05, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.25519818
-
-==================================================
-
-fine tune epoch 10
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:16<00:00,  2.47it/s]
+epoch 10
 {'train_runtime': 16.2043, 'train_samples_per_second': 39.064, 'train_steps_per_second': 2.468, 'train_loss': 0.00023227271158248185, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.25749144
-
-==================================================
-
-fine tune epoch 11
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:16<00:00,  2.49it/s]
+epoch 11
 {'train_runtime': 16.0566, 'train_samples_per_second': 39.423, 'train_steps_per_second': 2.491, 'train_loss': 6.6790911660064015e-06, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.2605707
-
-==================================================
-
-fine tune epoch 12
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:16<00:00,  2.49it/s]
+epoch 12
 {'train_runtime': 16.0912, 'train_samples_per_second': 39.338, 'train_steps_per_second': 2.486, 'train_loss': 5.355793400667608e-05, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.2609418
-
-==================================================
-
-fine tune epoch 13
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:17<00:00,  2.32it/s]
+epoch 13
 {'train_runtime': 17.2149, 'train_samples_per_second': 36.77, 'train_steps_per_second': 2.324, 'train_loss': 3.05729299725499e-06, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.2550288
-
-==================================================
-
-fine tune epoch 14
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:23<00:00,  1.69it/s]
+epoch 14
 {'train_runtime': 23.6934, 'train_samples_per_second': 26.716, 'train_steps_per_second': 1.688, 'train_loss': 1.315974623139482e-06, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26356453
-
-==================================================
-
-fine tune epoch 15
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:18<00:00,  2.21it/s]
+epoch 15
 {'train_runtime': 18.0601, 'train_samples_per_second': 35.05, 'train_steps_per_second': 2.215, 'train_loss': 5.023552603233838e-07, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26513502
-
-==================================================
-
-fine tune epoch 16
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:24<00:00,  1.67it/s]
+epoch 16
 {'train_runtime': 23.9891, 'train_samples_per_second': 26.387, 'train_steps_per_second': 1.667, 'train_loss': 2.77865228781593e-07, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26526472
-
-==================================================
-
-fine tune epoch 17
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:22<00:00,  1.76it/s]
+epoch 17
 {'train_runtime': 22.7205, 'train_samples_per_second': 27.86, 'train_steps_per_second': 1.761, 'train_loss': 1.9454291759757326e-07, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26508695
-
-==================================================
-
-fine tune epoch 18
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:22<00:00,  1.74it/s]
+epoch 18
 {'train_runtime': 22.9697, 'train_samples_per_second': 27.558, 'train_steps_per_second': 1.741, 'train_loss': 1.5317150428018068e-07, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26475117
-
-==================================================
-
-fine tune epoch 19
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:16<00:00,  2.47it/s]
+epoch 19
 {'train_runtime': 16.2185, 'train_samples_per_second': 39.029, 'train_steps_per_second': 2.466, 'train_loss': 1.24776522625325e-07, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.2641773
-
-==================================================
-
-fine tune epoch 20
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:16<00:00,  2.47it/s]
+epoch 20
 {'train_runtime': 16.2069, 'train_samples_per_second': 39.058, 'train_steps_per_second': 2.468, 'train_loss': 1.037286324390152e-07, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26375592
-
-==================================================
-
-fine tune epoch 21
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:15<00:00,  2.51it/s]
+epoch 21
 {'train_runtime': 15.9487, 'train_samples_per_second': 39.69, 'train_steps_per_second': 2.508, 'train_loss': 8.924139365262817e-08, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26328632
-
-==================================================
-
-fine tune epoch 22
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:15<00:00,  2.52it/s]
+epoch 22
 {'train_runtime': 15.8429, 'train_samples_per_second': 39.955, 'train_steps_per_second': 2.525, 'train_loss': 7.624427098562591e-08, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26273108
-
-==================================================
-
-fine tune epoch 23
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:15<00:00,  2.51it/s]
+epoch 23
 {'train_runtime': 15.9654, 'train_samples_per_second': 39.648, 'train_steps_per_second': 2.505, 'train_loss': 6.19432910298201e-08, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26196986
-
-==================================================
-
-fine tune epoch 24
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:15<00:00,  2.53it/s]
+epoch 24
 {'train_runtime': 15.8366, 'train_samples_per_second': 39.971, 'train_steps_per_second': 2.526, 'train_loss': 5.0808819196390684e-08, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26141924
-
-==================================================
-
-fine tune epoch 25
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:15<00:00,  2.52it/s]
+epoch 25
 {'train_runtime': 15.8608, 'train_samples_per_second': 39.91, 'train_steps_per_second': 2.522, 'train_loss': 4.3399629134910354e-08, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.26094115
-
-==================================================
-
-fine tune epoch 26
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
-100%|██████████| 40/40 [00:16<00:00,  2.46it/s]
+epoch 26
 {'train_runtime': 16.2383, 'train_samples_per_second': 38.982, 'train_steps_per_second': 2.463, 'train_loss': 3.669410659767891e-08, 'epoch': 1.0}
-
-Average Similarity Score (excluding diagonal):
 0.2603294
-
-==================================================
-
-fine tune epoch 27
-/home/ram/Codes/college/chatbot/local-langchain/venv/lib/python3.8/site-packages/accelerate/accelerator.py:436: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
-dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
-  warnings.warn(
- 68%|██████▊   | 27/40 [00:11<00:05,  2.37it/s]
