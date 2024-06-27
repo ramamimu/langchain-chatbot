@@ -385,5 +385,3 @@ epoch 128
 epoch 129
 {'train_runtime': 16.6144, 'train_samples_per_second': 38.099, 'train_steps_per_second': 2.408, 'train_loss': 0.00018886859761551021, 'epoch': 1.0}
 0.22769257
-epoch 130
-{'train_runtime': 17.0887, 'train_samples_per_second': 37.042, 'train_steps_per_second': 2.341, 'train_loss': 0.00017776574240997435, 'epoch': 1.0}
